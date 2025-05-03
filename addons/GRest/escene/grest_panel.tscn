@@ -53,6 +53,7 @@ grow_vertical = 2
 split_offset = 100
 
 [node name="Panel" type="Panel" parent="UI/HSplitR"]
+visible = false
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/HSplitR/Panel"]
@@ -367,9 +368,10 @@ layout_mode = 2
 [node name="TabContainer" type="TabContainer" parent="UI/HSplitR/HSplitL/PanelRest/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 2
-current_tab = 0
+current_tab = 1
 
 [node name="Response" type="TabBar" parent="UI/HSplitR/HSplitL/PanelRest/VBoxContainer/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -390,9 +392,20 @@ draw_tabs = true
 gutters_draw_line_numbers = true
 
 [node name="Headers" type="TabBar" parent="UI/HSplitR/HSplitL/PanelRest/VBoxContainer/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
+
+[node name="ItemList" type="ItemList" parent="UI/HSplitR/HSplitL/PanelRest/VBoxContainer/TabContainer/Headers"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 590.0
+grow_horizontal = 2
+grow_vertical = 2
+max_text_lines = 10
+max_columns = 2
+metadata/_edit_use_anchors_ = true
 
 [connection signal="request_completed" from="HTTPRequest" to="UI/HSplitR/HSplitL/PanelRest" method="_on_http_request_request_completed"]
 [connection signal="dragged" from="UI/HSplitR" to="UI" method="_on_h_split_r_dragged"]
@@ -400,3 +413,9 @@ metadata/_tab_index = 1
 [connection signal="pressed" from="UI/HSplitR/HSplitL/ContPrincipal/HBoxContainer/BtnSend" to="." method="_on_btn_send_pressed"]
 [connection signal="text_changed" from="UI/HSplitR/HSplitL/ContPrincipal/HBoxContainer2/TabContainer/Quey/Control/Panel/VBoxContainer/Parametro1/HBoxParam1/LineParamP1" to="UI/HSplitR/HSplitL/ContPrincipal" method="_on_line_param_p_1_text_changed"]
 [connection signal="text_changed" from="UI/HSplitR/HSplitL/ContPrincipal/HBoxContainer2/TabContainer/Quey/Control/Panel/VBoxContainer/Parametro1/HBoxParam1_1/LineParamP2" to="UI/HSplitR/HSplitL/ContPrincipal" method="_on_line_param_p_2_text_changed"]
+[connection signal="pressed" from="UI/HSplitR/HSplitL/ContPrincipal/HBoxContainer2/TabContainer/Headers/Control/Panel/VBoxContainer/Parametro1/HBoxContainer/CheckBox" to="." method="_on_check_box_pressed"]
+[connection signal="text_changed" from="UI/HSplitR/HSplitL/ContPrincipal/HBoxContainer2/TabContainer/Headers/Control/Panel/VBoxContainer/Parametro1/HBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_changed" from="UI/HSplitR/HSplitL/ContPrincipal/HBoxContainer2/TabContainer/Headers/Control/Panel/VBoxContainer/Parametro1/HBoxContainer2/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="UI/HSplitR/HSplitL/ContPrincipal/HBoxContainer2/TabContainer/Headers/Control/Panel/VBoxContainer/Parametro2/HBoxContainer/CheckBox" to="." method="_on_check_box_pressed"]
+[connection signal="text_changed" from="UI/HSplitR/HSplitL/ContPrincipal/HBoxContainer2/TabContainer/Headers/Control/Panel/VBoxContainer/Parametro2/HBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_changed" from="UI/HSplitR/HSplitL/ContPrincipal/HBoxContainer2/TabContainer/Headers/Control/Panel/VBoxContainer/Parametro2/HBoxContainer2/LineEdit" to="." method="_on_line_edit_text_changed"]

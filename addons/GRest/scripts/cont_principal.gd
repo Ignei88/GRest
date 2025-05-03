@@ -6,10 +6,16 @@ extends VBoxContainer
 @onready var check = $HBoxContainer2/TabContainer/Quey/Control/Panel/VBoxContainer/Parametro1/HBoxParam1/CheckBox
 @onready var container_params = $HBoxContainer2/TabContainer/Quey/Control/Panel/VBoxContainer
 
+@onready var header_params = $HBoxContainer2/TabContainer/Headers/Control/Panel/VBoxContainer
+
 var default_url := "https://www.example.com/welcome"
 
+
+
+
 func _ready() -> void:
-	httpText.text = default_url  # Solo al inicio
+
+	httpText.text = default_url 
 	param1.add_to_group("query_params")
 
 func _on_line_param_p_1_text_changed(new_text: String) -> void:
@@ -25,7 +31,6 @@ func _on_line_param_p_2_text_changed(new_text: String) -> void:
 		check.button_pressed = true
 		if container_params.get_children().filter(func(c): return c.is_in_group("query_params")).size() == 1:
 			_create_box_params()
-
 
 
 func _create_box_params():
