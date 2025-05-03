@@ -1,11 +1,19 @@
 Godot API Tester
 
-Un plugin inspirado en Postman para Godot 4.4.1 que simplifica las pruebas de APIs directamente en el editor. Crea, envía y depura solicitudes HTTP con una interfaz intuitiva. Ahorra tiempo, optimiza tu workflow y enfócate en crear. Ideal para gamedevs que integran servicios web.
+A Postman-inspired plugin for Godot 4.4.1 that simplifies API testing directly in the editor. Create, send, and debug HTTP requests with an intuitive interface. Save time, optimize your workflow, and focus on creating. Perfect for game developers integrating web services.
 
-✨ Características clave:
+✨ Key Features:
 
-Soporte para GET, POST, PUT, DELETE.
-Guardado de solicitudes para reusar pruebas.
-Respuestas en tiempo real con formato JSON legible.
-Integración nativa con el editor de Godot.
-🛠️ Perfecto para probar leaderboards, autenticación o cualquier API en tu juego. ¡Open source y en desarrollo!
+Supports GET, POST, PUT, DELETE.
+Save requests for reuse in future tests.
+Real-time responses with readable JSON formatting.
+Native integration with the Godot editor.
+
+🛠️ Ideal for testing leaderboards, authentication, or any game-related API. Open source and in active development!
+
+(Screenshots)
+
+![image](https://github.com/user-attachments/assets/db8b70d7-d359-41ac-9f21-072eb07dbb47)
+
+![image](https://github.com/user-attachments/assets/aa9397fe-8bcf-4680-8f87-234983e39087)
+
